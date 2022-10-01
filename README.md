@@ -47,7 +47,7 @@ Business Requirements
 *(Do NOT merge to main and Keep submission branch PR open in case of resubmit)*
 
 - Lab 26
-  - PR Link
+  - <https://github.com/Marthaquinram/resty-26js/pull/1>
 - Lab 27
   - PR Link
 - Lab 28
