@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './app.scss';
+import './App.scss';
 
 // Let's talk about using index.js and some other name in the component folder
 // There's pros and cons for each way of doing this ...
@@ -10,7 +10,6 @@ import Form from './components/form/form';
 import Results from './components/results/results';
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
