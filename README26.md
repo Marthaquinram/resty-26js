@@ -24,36 +24,18 @@ Business Requirements
   - The < Results/> component should show mock API results.
 
 
-# Lab 27
-
-# Lab 28
-
-# Lab 29
-
 ## Deployment Links
 - Lab 26
   - Deploy link here: 
-- Lab 27
-  - Deploy link here:
-- Lab 28
-  - Deploy link here:
-- Lab 29
-  - Deploy link here:
 
-
-
+## UML:
+- Lab26-UML
+  - 
 
 # PR 
 *(Do NOT merge to main and Keep submission branch PR open in case of resubmit)*
-
 - Lab 26
   - <https://github.com/Marthaquinram/resty-26js/pull/1>
-- Lab 27
-  - PR Link
-- Lab 28
-  - PR Link
-- Lab 29
-  - PR Link
 
 
 ### Collaborators:
