@@ -1,12 +1,37 @@
-// import React from "react";
-// import { render, screen } from "@testing-library/react";
-// import App from "./App";
+import { createElement } from 'react';
+import { render, screen } from "@testing-library/react";
+// import App from "../App";
+import Header from "../components/header/header";
+import Results from "../components/results/results";
+import Footer from "../components/footer/footer";
+import Form from "../components/form/form";
 
-// test("renders learn react link", () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/Pat's Sam/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
+
+describe("App Header", () => {
+  it("can render a header", () => {
+    let header = createElement(Header);
+    render(header);
+    expect(header).toBeTruthy();
+    expect(screen.getAllByText("RESTy-Sure")).toBeTruthy();
+  });
+
+  it("can render a footer", () => {
+    let footer = createElement(Footer);
+    render(footer);
+    expect(footer).toBeTruthy();
+  });
+
+  it("can render a form component", () => {
+    let forms = createElement(Form);
+    render(forms);
+    expect(forms).toBeTruthy();
+  });
+  it("can render a the results from the form completion ", () => {
+    let results = createElement(Results);
+    render(results);
+    expect(results).toBeTruthy();
+  });
+});
 
 // .getBy -> returns element OR throws error if not found
 // .queryBy -> returns the first element, or null
