@@ -20,21 +20,23 @@ Application Flow:
 - Displays the response headers and results separately
 - Both headers and results should be “pretty printed” JSON
 
-
 ## Deployment Links
+
 - Lab 27
   - Deploy link here:
 
 ## UML
+
 - Lab27-UML
-  - 
+  -
 
 # PR
-*(Do NOT merge to main and Keep submission branch PR open in case of resubmit)*
+
+_(Do NOT merge to main and Keep submission branch PR open in case of resubmit)_
 
 - Lab 27
   - PR Link
 
 ### Collaborators
 
-- 
+- Tony R, Danny C
