@@ -1,4 +1,4 @@
-import './app.scss';
+import '/Users/marthaquintanilla-ramirez/projects/courses/code401/resty-26js/src/app.scss';
 import React, { useEffect, useState } from 'react';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
