@@ -1,20 +1,38 @@
 // import React from 'react';
 import './form.scss';
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 
+const initialApiState = {
+  method: '',
+  url: '',
+  body: {},
+};
 
+function reducer(state, action) {
+  console.log('hey im STATE', state);
+  console.log('hey im ACTION', action);
+  switch (action.type) {
+    case 'method':
+      return initialApiState.method = action.method;
+    case 'url':
+      return initialApiState.url = action.url;
+    case 'body':
+      return initialApiState.body = action.body;
+    default:
+      throw new Error();
+  }
+}
 export default function Form(props) {
-  const [method, setMethod] = useState('');
-  const [url, setUrl] = useState('');
-  const [body, setBody] = useState({});
+  const [state, dispatch] = useReducer(reducer, initialApiState);
 
-
+  console.log('YOOO', state);
   const handleSubmit = e => {
     e.preventDefault();
+
     const formData = {
-      method: method,//these are dynamically update state properties
-      url: url,//these are dynamically update state properties
-      body: body,
+      method: initialApiState.method,//these are dynamically update state properties
+      url: initialApiState.url,//these are dynamically update state properties
+      body: initialApiState.body,
     };
 
     props.handleApiCall(formData);
@@ -22,18 +40,18 @@ export default function Form(props) {
 
   const onChangeMethod = e => {
     e.preventDefault();
-    setMethod(e.target.value);
-    console.log("HEY THIS IS METHOD UPDATE", method);
+    dispatch({ type: 'method', method: e.target.value });
+    console.log("HEY THIS IS METHOD UPDATE", initialApiState.method);
   }
   const onUrlChange = e => {
     e.preventDefault();
-    setUrl(e.target.value);
-    console.log("HEY URL IM UPDATING YOU", url);
+    dispatch({ type: 'url', url: e.target.value });
+    console.log("HEY URL IM UPDATING YOU", initialApiState.url);
   }
   const onBodyChange = e => {
     e.preventDefault();
-    setBody(e.target.value);
-    console.log("HEY BODY", body);
+    dispatch({ type: 'body', body: e.target.value });
+    console.log("HEY BODY", initialApiState.body);
   }
 
 
@@ -55,7 +73,7 @@ export default function Form(props) {
             <button id="delete" onClick={(e) => onChangeMethod(e)} value='DELETE'>DELETE</button>
           </div>
           <div className='text-container'>
-            {method === 'POST' ?
+            {initialApiState.method === 'POST' ?
               <textarea name='textarea' onChange={(e) => onBodyChange(e)} rows={5} cols={70} minLength={1} maxLength={600} placeholder='json body here...' /> : null
             }
           </div>
