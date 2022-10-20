@@ -43,6 +43,7 @@ Deploy your application to GitHub pages using a GitHub action which will publish
 
 - Lab 29
   - Deploy link here:
+  - Having issues deploying, Netfliy isnt displaying my SCSS at all.
 
 ## UML
 
