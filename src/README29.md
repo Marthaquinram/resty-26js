@@ -43,7 +43,11 @@ Deploy your application to GitHub pages using a GitHub action which will publish
 
 - Lab 29
   - Deploy link here:
-  - Having issues deploying, Netfliy isnt displaying my SCSS at all.
+  - <https://resty-sure.netlify.app/>
+  - to test APIs enter into URL box, click method and then GO:
+    - https://pokeapi.co/api/v2/
+    - https://jsonplaceholder.typicode.com/posts
+    - https://catfact.ninja/fact
 
 ## UML
 
