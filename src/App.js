@@ -1,5 +1,5 @@
+import './app.scss';
 import React, { useEffect, useState } from 'react';
-import './src/App.scss';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Form from './components/form/form';
