@@ -5,7 +5,9 @@ import Footer from './components/footer/footer';
 import Form from './components/form/form';
 import Results from './components/results/results';
 import axios from 'axios';
+import History from './components/form/history/history';
 
+const history = [];
 
 function App() {
   const [data, setData] = useState(null);
@@ -13,13 +15,17 @@ function App() {
 
 
   const callApi = (receivingObjOnForm) => {
+    history.push(receivingObjOnForm.url); // pushes url to history array
+    console.log('hey WHERE ARE YOU', receivingObjOnForm);
     setRequestParams(receivingObjOnForm);//updating/setting the state
   }
+
+
   useEffect(() => {
     async function gatherData() {
       if (requestParams.method === 'GET') {
         await axios.get(requestParams.url).then(response => {
-          console.log(response);
+          console.log('HEY IM THE RESPONSEEEEEEEE', response);
           setData(response);
         });
       }
@@ -57,6 +63,7 @@ function App() {
       <div>URL: {requestParams.url}</div>
       <Form handleApiCall={callApi} />
       <Results dataFromPayload={data} />
+      <History trackHistory={history} />
       <Footer />
     </React.Fragment>
   );
